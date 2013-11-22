@@ -126,7 +126,13 @@ public class MainActivity extends Activity {
 			Intent i = null;
 			switch (TYPEOFUSER.valueOf(userType)){
 			case Patient:
-				i = new Intent(this, HospitalAdmin.class);
+				i = new Intent(this, PatientHomepage.class);
+				int k = db.getPatientLoginId(userType,userName,md5(userPassword));
+				if(k!=0){
+					i.putExtra("patientLoginId", k);
+				} else {
+					Toast.makeText(this, "Not such patient found", Toast.LENGTH_LONG).show();
+				}
 				break;
 			case HospitalAdmin:
 				i = new Intent(this, HospitalAdmin.class);
@@ -141,7 +147,14 @@ public class MainActivity extends Activity {
 				i = new Intent(this, HospitalAdmin.class);
 				break;
 			case Doctor:
-				i = new Intent(this, HospitalAdmin.class);
+				i = new Intent(this,DoctorHomePage.class);
+				int d = db.getDoctorLoginId(userType,userName,md5(userPassword));
+				if(d!=0){
+					i.putExtra("doctorLoginId", d);
+				} else {
+					Toast.makeText(this, "Not such doctor found", Toast.LENGTH_LONG).show();
+				}
+//				i = new Intent(this, DoctorHomePage.class);
 				break;
 			case Pharmacist:
 				i = new Intent(this, HospitalAdmin.class);
