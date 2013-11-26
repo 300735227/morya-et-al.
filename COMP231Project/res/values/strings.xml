@@ -61,5 +61,13 @@
     </string-array>
 
     <string name="title_activity_receptionist_view_all_patients">ReceptionistViewAllPatients</string>
+<<<<<<< HEAD
+=======
+    <string name="title_activity_receptionist_account">ReceptionistAccount</string>
+    <string name="title_activity_receptionistdb">Receptionistdb</string>
+    <string name="title_activity_add_lab">AddLab</string>
+    <string name="title_activity_lab_account">LabAccount</string>
+    <string name="title_activity_lab">Lab</string>
+>>>>>>> parent of deb93ac... Doctor can View His Profile
 
 </resources>

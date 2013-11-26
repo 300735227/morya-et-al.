@@ -53,6 +53,7 @@ public class Receptionist extends Activity {
 				startActivity(i);
 			}
 		});
+<<<<<<< HEAD
 		
 //		btnAllDoctors = (Button) findViewById(R.id.btnAllDoctors);
 //		btnAllDoctors.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +64,8 @@ public class Receptionist extends Activity {
 //				startActivity(i);
 //			}
 //		});
+=======
+>>>>>>> parent of deb93ac... Doctor can View His Profile
 	}
 
 	@Override

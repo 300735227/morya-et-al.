@@ -2,23 +2,23 @@ package com.example.ezhealth;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.content.Intent;
 import android.view.Menu;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
 public class ReceptionistDoctorSearch extends Activity {
+<<<<<<< HEAD
 	
 	private EditText etDoctorFN, etDoctorLN, etDoctorID;
 	private Button btnSearchDoctor;
 	private String firstName, lastName;
 	private int doctorID;
+=======
+
+>>>>>>> parent of deb93ac... Doctor can View His Profile
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_receptionist_doctor_search);
+<<<<<<< HEAD
 		etDoctorFN = (EditText) findViewById(R.id.etDocFirstName);
 		etDoctorLN = (EditText) findViewById(R.id.etDocLastName);
 		etDoctorID = (EditText) findViewById(R.id.etDoctorId);
@@ -65,6 +65,9 @@ public class ReceptionistDoctorSearch extends Activity {
 	});}
 			
 		
+=======
+	}
+>>>>>>> parent of deb93ac... Doctor can View His Profile
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
