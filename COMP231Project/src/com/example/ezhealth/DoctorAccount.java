@@ -38,23 +38,16 @@ public class DoctorAccount extends Activity {
 				userName = etUserName.getText().toString();
 				password = etPassword.getText().toString();
 				confirmPassword = etConfirmPassword.getText().toString();
-				if(db.isUserNameAvailable(userName)){
-					if(password.equals(confirmPassword)){
-						db.addUser(new UserLogin(userType, userName, MainActivity.md5(password)));
-						doctorUserId = db.getUserId(userType, userName,MainActivity.md5(password) );
-						Intent i = new Intent(getBaseContext(), AddDoctor.class);
-						i.putExtra("DoctorUserId", doctorUserId);
-						startActivity(i);
-						
-					} else {
-						Toast.makeText(getBaseContext(), "Passwords do not match", Toast.LENGTH_SHORT).show();
-						etPassword.setText("");
-						etConfirmPassword.setText("");
-					}
-			
+				
+				if(password.equals(confirmPassword)){
+					db.addUser(new UserLogin(userType, userName, MainActivity.md5(password)));
+					doctorUserId = db.getUserId(userType, userName,MainActivity.md5(password) );
+					Intent i = new Intent(getBaseContext(), AddDoctor.class);
+					i.putExtra("DoctorUserId", doctorUserId);
+					startActivity(i);
+					
 				} else {
-					Toast.makeText(getBaseContext(), "This username is not available for you!! Try other one!!", Toast.LENGTH_SHORT).show();
-					etUserName.setText("");
+					Toast.makeText(getBaseContext(), "Passwords do not match", Toast.LENGTH_SHORT).show();
 					etPassword.setText("");
 					etConfirmPassword.setText("");
 				}
